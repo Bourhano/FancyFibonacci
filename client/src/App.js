@@ -13,12 +13,15 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://github.com/Bourhano/FancyFibonacci"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            <h1 className='App-title'>
+              Fibonacci Calculator Ver2.0
+            </h1>
           </a>
+          
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
         </header>

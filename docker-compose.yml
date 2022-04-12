@@ -12,13 +12,13 @@ services:
       - client
     restart: always
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./nginx
     ports:
       - '3050:80'
   api:
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./server
     volumes:
       - /home/node/app/node_modules
@@ -33,7 +33,7 @@ services:
       - PGPORT=5432
   client:
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./client
     volumes:
       - /home/node/app/node_modules
@@ -42,7 +42,7 @@ services:
       - WDS_SOCKET_PORT=0
   worker:
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./worker
     volumes:
       - /home/node/app/node_modules
